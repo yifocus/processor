@@ -12,30 +12,30 @@ public class Test {
 
         Test t = new Test();
         List<IProcessor> list = new CopyOnWriteArrayList<>();
-        list.add(new Process1("processor1",true));
-        list.add(new Process1("processor2",true));
-        list.add(new Process1("processor3",false));
-        list.add(new Process1("processor4",false));
-        list.add(new Process1("processor5",true));
-        list.add(new Process1("processor6",true));
-        list.add(new Process1("processor7",true));
+        list.add(new Process1("任务一",true));
+        list.add(new Process1("任务二",true));
+        list.add(new Process1("任务三",false));
+        list.add(new Process1("任务四",false));
+        list.add(new Process1("任务五",true));
+        list.add(new Process1("任务六",true));
+        list.add(new Process1("任务七",true));
 
 
         long start = System.currentTimeMillis();
         ProcessorExecuteService processorPool = new ProcessorExecuteService(list);
         processorPool.executeAsync();
 
-        System.out.println("end execute" + (System.currentTimeMillis() - start));
+        System.out.println("end execute: " + (System.currentTimeMillis() - start));
 
-        System.out.println(processorPool.getProcessorResult("processor1"));
-        System.out.println(processorPool.getProcessorResult("processor2"));
-        System.out.println(processorPool.getProcessorResult("processor3"));
-        System.out.println(processorPool.getProcessorResult("processor4"));
-        System.out.println(processorPool.getProcessorResult("processor5"));
-        System.out.println(processorPool.getProcessorResult("processor6"));
-        System.out.println(processorPool.getProcessorResult("processor7"));
+        System.out.println(processorPool.getProcessorResult("任务一"));
+        System.out.println(processorPool.getProcessorResult("任务二"));
+        System.out.println(processorPool.getProcessorResult("任务三"));
+        System.out.println(processorPool.getProcessorResult("任务四"));
+        System.out.println(processorPool.getProcessorResult("任务五"));
+        System.out.println(processorPool.getProcessorResult("任务六"));
+        System.out.println(processorPool.getProcessorResult("任务七"));
 
-        System.out.println("end get" + (System.currentTimeMillis() - start));
+        System.out.println("end get : " + (System.currentTimeMillis() - start));
 
     }
 }
