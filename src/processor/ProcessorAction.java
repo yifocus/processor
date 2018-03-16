@@ -42,6 +42,8 @@ public class ProcessorAction extends RecursiveTask{
                     // 执行同步程序
                     ProcessorAction action = new ProcessorAction(queue.buildNewQueue(processor));
                     result = action.invoke();
+
+                    queue.processorService.addResult(processor.id(),result);
                     asyncProcessors.clear();
                 }
             }
@@ -61,7 +63,7 @@ public class ProcessorAction extends RecursiveTask{
 
         Map<String, ProcessorAction> actionMap = new HashMap<String, ProcessorAction>();
         for(IProcessor processor: asyncProcessors){
-            actionMap.put(processor.id(),new ProcessorAction(queue.buildNewQueue(processor)));
+            actionMap.put(processor.id(), new ProcessorAction(queue.buildNewQueue(processor)));
         }
 
         Collection<ProcessorAction> actions = actionMap.values();
