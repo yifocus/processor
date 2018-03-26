@@ -2,7 +2,6 @@ package processor;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
-import java.util.concurrent.ForkJoinPool;
 
 /**
  * Created by focus on 2018/3/16.
@@ -12,13 +11,13 @@ public class Test {
 
         Test t = new Test();
         List<IProcessor> list = new CopyOnWriteArrayList<>();
-        list.add(new Process1("ÈÎÎñÒ»",true));
-        list.add(new Process1("ÈÎÎñ¶ş",true));
-        list.add(new Process1("ÈÎÎñÈı",false));
-        list.add(new Process1("ÈÎÎñËÄ",false));
-        list.add(new Process1("ÈÎÎñÎå",true));
-        list.add(new Process1("ÈÎÎñÁù",true));
-        list.add(new Process1("ÈÎÎñÆß",true));
+        list.add(new Process1("ä»»åŠ¡ä¸€",true));
+        list.add(new Process1("ä»»åŠ¡äºŒ",true));
+        list.add(new Process1("ä»»åŠ¡ä¸‰",false));
+        list.add(new Process1("ä»»åŠ¡å››",false));
+        list.add(new Process1("ä»»åŠ¡äº”",true));
+        list.add(new Process1("ä»»åŠ¡å…­",true));
+        list.add(new Process1("ä»»åŠ¡ä¸ƒ",true));
 
 
         long start = System.currentTimeMillis();
@@ -27,13 +26,13 @@ public class Test {
 
         System.out.println("end execute: " + (System.currentTimeMillis() - start));
 
-        System.out.println(processorPool.getProcessorResult("ÈÎÎñÒ»"));
-        System.out.println(processorPool.getProcessorResult("ÈÎÎñ¶ş"));
-        System.out.println(processorPool.getProcessorResult("ÈÎÎñÈı"));
-        System.out.println(processorPool.getProcessorResult("ÈÎÎñËÄ"));
-        System.out.println(processorPool.getProcessorResult("ÈÎÎñÎå"));
-        System.out.println(processorPool.getProcessorResult("ÈÎÎñÁù"));
-        System.out.println(processorPool.getProcessorResult("ÈÎÎñÆß"));
+        System.out.println(processorPool.getProcessorResult("ä»»åŠ¡ä¸€"));
+        System.out.println(processorPool.getProcessorResult("ä»»åŠ¡äºŒ"));
+        System.out.println(processorPool.getProcessorResult("ä»»åŠ¡ä¸‰"));
+        System.out.println(processorPool.getProcessorResult("ä»»åŠ¡å››"));
+        System.out.println(processorPool.getProcessorResult("ä»»åŠ¡äº”"));
+        System.out.println(processorPool.getProcessorResult("ä»»åŠ¡å…­"));
+        System.out.println(processorPool.getProcessorResult("ä»»åŠ¡ä¸ƒ"));
 
         System.out.println("end get : " + (System.currentTimeMillis() - start));
 

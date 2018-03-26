@@ -1,25 +1,25 @@
 package processor;
 
 /**
- * ÈÎÎñ½Ó¿Ú
+ * ä»»åŠ¡æ¥å£
  * Created by focus on 2018/3/16.
  */
 public interface IProcessor {
 
     /**
-     * ÈÎÎñid
+     * ä»»åŠ¡id
      * @return
      */
     public String id();
 
     /**
-     * ÊÇ·ñÊÇÒì²½
-     * @return true Òì²½£¬false Í¬²½
+     * æ˜¯å¦æ˜¯å¼‚æ­¥
+     * @return true å¼‚æ­¥ï¼Œfalse åŒæ­¥
      */
     public boolean isAsyn();
 
     /**
-     * ÈÎÎñÂß¼­´¦Àí
+     * ä»»åŠ¡é€»è¾‘å¤„ç†
      * @return
      */
     public Object process();

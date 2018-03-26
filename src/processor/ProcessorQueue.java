@@ -5,7 +5,7 @@ import java.util.concurrent.ConcurrentLinkedQueue;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * ÈÎÎñÁ´±í
+ * ä»»åŠ¡é“¾è¡¨
  * Created by focus on 2018/3/16.
  */
 public class ProcessorQueue{

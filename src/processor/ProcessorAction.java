@@ -8,7 +8,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.RecursiveTask;
 
 /**
- * ¶àÏß³ÌÈÎÎñµ÷¶È´¦Àí
+ * å¤šçº¿ç¨‹ä»»åŠ¡è°ƒåº¦å¤„ç†
  * Created by focus on 2018/3/16.
  */
 public class ProcessorAction extends RecursiveTask{
@@ -39,7 +39,7 @@ public class ProcessorAction extends RecursiveTask{
                         invokeAllAsyncProcessors(asyncProcessors);
                     }
 
-                    // Ö´ĞĞÍ¬²½³ÌĞò
+                    // æ‰§è¡ŒåŒæ­¥ç¨‹åº
                     ProcessorAction action = new ProcessorAction(queue.buildNewQueue(processor));
                     result = action.invoke();
 
@@ -56,7 +56,7 @@ public class ProcessorAction extends RecursiveTask{
     }
 
     /**
-     * Ö´ĞĞËùÓĞÒì²½³ÌĞò
+     * æ‰§è¡Œæ‰€æœ‰å¼‚æ­¥ç¨‹åº
      * @param asyncProcessors
      */
     public void invokeAllAsyncProcessors(Collection<IProcessor> asyncProcessors){

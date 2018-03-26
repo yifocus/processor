@@ -7,7 +7,7 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
 
 /**
- * ¶àÏß³Ì²¢ĞĞÖ´ĞĞ¼°µ÷¶È¹ÜÀí·şÎñ
+ * å¤šçº¿ç¨‹å¹¶è¡Œæ‰§è¡ŒåŠè°ƒåº¦ç®¡ç†æœåŠ¡
  * Created by focus on 2018/3/16.
  */
 public class ProcessorExecuteService {
@@ -27,7 +27,7 @@ public class ProcessorExecuteService {
     }
 
     /**
-     * »ñÈ¡ÈÎÎñÖ´ĞĞÍê³ÉÖ®ºóµÄ½á¹û
+     * è·å–ä»»åŠ¡æ‰§è¡Œå®Œæˆä¹‹åçš„ç»“æœ
      * @param id
      * @return
      */
@@ -43,7 +43,7 @@ public class ProcessorExecuteService {
     }
 
     /**
-     * ÈÎÎñÖ´ĞĞ£º ´Ë·½·¨Íê³ÉÖ®ºó£¬ËùÓĞÈÎÎñ¶¼ÒÑ¾­µ÷ÓÃÍê³É
+     * ä»»åŠ¡æ‰§è¡Œï¼š æ­¤æ–¹æ³•å®Œæˆä¹‹åï¼Œæ‰€æœ‰ä»»åŠ¡éƒ½å·²ç»è°ƒç”¨å®Œæˆ
      * @return
      */
     public void execute(){
@@ -52,7 +52,7 @@ public class ProcessorExecuteService {
     }
 
     /**
-     * Òì²½Ö´ĞĞÈÎÎñ
+     * å¼‚æ­¥æ‰§è¡Œä»»åŠ¡
      */
     public Future executeAsync(){
         ForkJoinPool pool = new ForkJoinPool();
@@ -61,7 +61,7 @@ public class ProcessorExecuteService {
     }
 
     /**
-     * ÊÍ·Å×ÊÔ´
+     * é‡Šæ”¾èµ„æº
      * @return
      */
     public boolean close(){
